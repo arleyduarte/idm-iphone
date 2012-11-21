@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		061A386C165D50B300100DD0 /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 061A386B165D50B300100DD0 /* Status.m */; };
+		061A387B165D6CE900100DD0 /* RestKit.png in Resources */ = {isa = PBXBuildFile; fileRef = 061A387A165D6CE800100DD0 /* RestKit.png */; };
+		06ACC549165C1E4D00C1DC5A /* LoginTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06ACC548165C1E4D00C1DC5A /* LoginTableViewController.m */; };
+		06ACC550165CFD6C00C1DC5A /* UserValidatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 06ACC54F165CFD6C00C1DC5A /* UserValidatorManager.m */; };
+		06ACC553165D060C00C1DC5A /* NSString+RFC3875.m in Sources */ = {isa = PBXBuildFile; fileRef = 06ACC552165D060C00C1DC5A /* NSString+RFC3875.m */; };
+		06ACC556165D182100C1DC5A /* ConnectionParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 06ACC555165D182100C1DC5A /* ConnectionParameters.m */; };
 		06B4F1811655474C005B9C64 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06B4F1801655474C005B9C64 /* UIKit.framework */; };
 		06B4F1831655474C005B9C64 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06B4F1821655474C005B9C64 /* Foundation.framework */; };
 		06B4F1851655474C005B9C64 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06B4F1841655474C005B9C64 /* CoreGraphics.framework */; };
@@ -74,6 +80,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		061A386A165D50B300100DD0 /* Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Status.h; sourceTree = "<group>"; };
+		061A386B165D50B300100DD0 /* Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Status.m; sourceTree = "<group>"; };
+		061A387A165D6CE800100DD0 /* RestKit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RestKit.png; sourceTree = "<group>"; };
+		06ACC547165C1E4D00C1DC5A /* LoginTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginTableViewController.h; sourceTree = "<group>"; };
+		06ACC548165C1E4D00C1DC5A /* LoginTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginTableViewController.m; sourceTree = "<group>"; };
+		06ACC54B165C2A4C00C1DC5A /* ResponseActionProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResponseActionProtocol.h; sourceTree = "<group>"; };
+		06ACC54E165CFD6C00C1DC5A /* UserValidatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserValidatorManager.h; sourceTree = "<group>"; };
+		06ACC54F165CFD6C00C1DC5A /* UserValidatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserValidatorManager.m; sourceTree = "<group>"; };
+		06ACC551165D060C00C1DC5A /* NSString+RFC3875.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RFC3875.h"; sourceTree = "<group>"; };
+		06ACC552165D060C00C1DC5A /* NSString+RFC3875.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RFC3875.m"; sourceTree = "<group>"; };
+		06ACC554165D182100C1DC5A /* ConnectionParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionParameters.h; sourceTree = "<group>"; };
+		06ACC555165D182100C1DC5A /* ConnectionParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionParameters.m; sourceTree = "<group>"; };
 		06B4F17C1655474C005B9C64 /* idm-iPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "idm-iPhone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06B4F1801655474C005B9C64 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		06B4F1821655474C005B9C64 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -122,6 +140,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		061A3869165D509400100DD0 /* DomainModel */ = {
+			isa = PBXGroup;
+			children = (
+				061A386A165D50B300100DD0 /* Status.h */,
+				061A386B165D50B300100DD0 /* Status.m */,
+			);
+			name = DomainModel;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		06ACC54A165C2A1300C1DC5A /* ResourceHandler */ = {
+			isa = PBXGroup;
+			children = (
+				06ACC54B165C2A4C00C1DC5A /* ResponseActionProtocol.h */,
+				06ACC54E165CFD6C00C1DC5A /* UserValidatorManager.h */,
+				06ACC54F165CFD6C00C1DC5A /* UserValidatorManager.m */,
+				06ACC551165D060C00C1DC5A /* NSString+RFC3875.h */,
+				06ACC552165D060C00C1DC5A /* NSString+RFC3875.m */,
+				06ACC554165D182100C1DC5A /* ConnectionParameters.h */,
+				06ACC555165D182100C1DC5A /* ConnectionParameters.m */,
+			);
+			name = ResourceHandler;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		06B4F1711655474C005B9C64 = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +203,8 @@
 		06B4F1861655474C005B9C64 /* idm-iPhone */ = {
 			isa = PBXGroup;
 			children = (
+				061A3869165D509400100DD0 /* DomainModel */,
+				06ACC54A165C2A1300C1DC5A /* ResourceHandler */,
 				06B4F1C9165556B1005B9C64 /* Controllers */,
 				06B4F18F1655474C005B9C64 /* AppDelegate.h */,
 				06B4F1901655474C005B9C64 /* AppDelegate.m */,
@@ -200,6 +245,9 @@
 		06B4F1C9165556B1005B9C64 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				061A387A165D6CE800100DD0 /* RestKit.png */,
+				06ACC547165C1E4D00C1DC5A /* LoginTableViewController.h */,
+				06ACC548165C1E4D00C1DC5A /* LoginTableViewController.m */,
 			);
 			name = Controllers;
 			path = ..;
@@ -306,6 +354,7 @@
 				06B4F1951655474C005B9C64 /* Default@2x.png in Resources */,
 				06B4F1971655474C005B9C64 /* Default-568h@2x.png in Resources */,
 				06B4F19A1655474C005B9C64 /* MainStoryboard.storyboard in Resources */,
+				061A387B165D6CE900100DD0 /* RestKit.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +368,11 @@
 				06B4F18D1655474C005B9C64 /* main.m in Sources */,
 				06B4F1911655474C005B9C64 /* AppDelegate.m in Sources */,
 				06B4F19D1655474D005B9C64 /* ViewController.m in Sources */,
+				06ACC549165C1E4D00C1DC5A /* LoginTableViewController.m in Sources */,
+				06ACC550165CFD6C00C1DC5A /* UserValidatorManager.m in Sources */,
+				06ACC553165D060C00C1DC5A /* NSString+RFC3875.m in Sources */,
+				06ACC556165D182100C1DC5A /* ConnectionParameters.m in Sources */,
+				061A386C165D50B300100DD0 /* Status.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +507,7 @@
 				06B4F1A21655474D005B9C64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
