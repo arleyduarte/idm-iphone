@@ -25,47 +25,50 @@ NSString* const LoginURL =  @"/user/validate";
                           ];
     
     
-    NSLog(@"Fetching resource %@", LoginURL);
-    
-    NSLog(@"httpBody: %@", httpBody);
-    
-    RKURL *baseURL = [RKURL URLWithBaseURLString:BASE_URL];
-    
-  RKClient *client = [RKClient clientWithBaseURL:baseURL];
-  [RKClient setSharedClient:client];
 
-    RKRequest *request = [[RKClient sharedClient] requestWithResourcePath:LoginURL];
-     request.delegate = self;
 
-    [request send];
-    
  
 }
 
 - (void)requestDidStartLoad:(RKRequest *)request
 {
-    NSLog(@"requestDidStartLoad");
+    
 }
 
-- (void)requestDidTimeout:(RKRequest *)request
-{
-    NSLog(@"requestDidStartLoad");
-}
 
-- (void)requestDidCancelLoad:(RKRequest *)request
+- (void)request:(RKRequest *)request didSendBodyData:(NSInteger)bytesWritten totalBytesWritten:(NSInteger)totalBytesWritten totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite
 {
-    NSLog(@"requestDidStartLoad");
+    NSLog(@"user a  didSendBodyData %@", @"dd");
 }
 
 - (void)request:(RKRequest *)request didLoadResponse:(RKResponse *)response
 {
-    NSLog(@"requestDidStartLoad");
+    NSLog(@"user a didLoadResponse %@", [response bodyAsString]);
+    
 }
 
 - (void)request:(RKRequest *)request didFailLoadWithError:(NSError *)error
 {
-    NSLog(@"requestDidStartLoad");
+    NSLog(@"user a didFailLoadWithError %@", @"dd");
 }
+
+
+#pragma mark - singleton behavior
+
+//this is the shared singleton instance
+//allocs are forbidden for correct use of the manager
+__strong static UserValidatorManager *sharedManager = nil;
+
++(UserValidatorManager *)sharedInstance
+{
+    
+    static dispatch_once_t once_token = 0;
+    dispatch_once(&once_token, ^{
+        sharedManager = [[self alloc] init];
+    });
+    return sharedManager;
+}
+
 
 
 

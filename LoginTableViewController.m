@@ -31,8 +31,10 @@ NSURL *gRKCatalogBaseURL = nil;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
 
+    NSURL *gRKCatalogBaseURL = [[NSURL alloc] initWithString:BASE_URL];
+    
+    _client  = [[RKClient alloc] initWithBaseURL:gRKCatalogBaseURL];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -131,59 +133,72 @@ NSURL *gRKCatalogBaseURL = nil;
     //disable both user inpuths to avoid text changue during request
    // [usernameTextField setEnabled:NO];
    // [passwordTextField setEnabled:NO];
+
+    UserValidatorManager *userValidatorManager = [UserValidatorManager sharedInstance];
+    
+    [userValidatorManager setDelegate:self];
+    [userValidatorManager validateUserWithUserName:usernameTextField.text password:passwordTextField.text];
+
+    
     
     UIImage *image = [UIImage imageNamed:@"RestKit.png"];
     NSData *imageData  = UIImagePNGRepresentation(image);
     
     
-    NSURL *gRKCatalogBaseURL = [[NSURL alloc] initWithString:BASE_URL];
+
+
+    
+    //RKParams *params = [RKParams params];
+    
+  
+    
+    NSDictionary *shopParams = [NSDictionary dictionaryWithKeysAndObjects:
+                                @"password",@"123",
+                                @"location",@"latitude,longitude",
+                                nil];
+    
+    RKParams *params = [RKParams paramsWithDictionary:shopParams];
     
     
-     _client = [[RKClient alloc] initWithBaseURL:gRKCatalogBaseURL];
-    
-    RKParams *params = [RKParams params];
-    
-    [params setData:imageData MIMEType:@"image/png" forParam:@"image2"];
+    //  [params setData:imageData MIMEType:@"image/png" forParam:@"image2"];
     
     // Log info about the serialization
     NSLog(@"RKParams HTTPHeaderValueForContentType = %@", [params HTTPHeaderValueForContentType]);
     NSLog(@"RKParams HTTPHeaderValueForContentLength = %d", [params HTTPHeaderValueForContentLength]);
     
     
-
-      [_client post:@"/user/validate" params:params delegate:self];
-   // UserValidatorManager *userValidatorManager = [[UserValidatorManager alloc]init];
     
-   // [userValidatorManager setDelegate:self];
-    //[userValidatorManager validateUserWithUserName:usernameTextField.text password:passwordTextField.text];
-
+    [_client post:@"/user/validate" params:params delegate:self];
+    
     
     NSLog(@"user name %@", usernameTextField.text);
     
     
     return YES;
 }
+
 - (void)requestDidStartLoad:(RKRequest *)request
 {
-   
+    
 }
 
 
 - (void)request:(RKRequest *)request didSendBodyData:(NSInteger)bytesWritten totalBytesWritten:(NSInteger)totalBytesWritten totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite
 {
-NSLog(@"user didSendBodyData %@", usernameTextField.text);
+    NSLog(@"user didSendBodyData %@", @"dd");
 }
 
 - (void)request:(RKRequest *)request didLoadResponse:(RKResponse *)response
 {
-NSLog(@"user didLoadResponse %@", [response bodyAsString]);
+    NSLog(@"user didLoadResponse %@", [response bodyAsString]);
     
 }
 
 - (void)request:(RKRequest *)request didFailLoadWithError:(NSError *)error
 {
-NSLog(@"user didFailLoadWithError %@", usernameTextField.text);
+    NSLog(@"user didFailLoadWithError %@", @"dd");
 }
+
 
 - (void)viewDidUnload {
     [self setUsernameTextField:nil];

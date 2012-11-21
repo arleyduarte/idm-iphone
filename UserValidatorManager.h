@@ -13,6 +13,8 @@
 @interface UserValidatorManager : NSObject <RKRequestDelegate>
 
 @property(nonatomic, retain) id <ResponseActionProtocol> delegate;
++(UserValidatorManager *)sharedInstance;
+
 
 -(void) validateUserWithUserName:(NSString *) username password:(NSString *) password;
 
