@@ -10,8 +10,9 @@
 #import "ResponseActionProtocol.h"
 #import "UserValidatorManager.h"
 
-@interface LoginTableViewController : UITableViewController <RKRequestDelegate, ResponseActionProtocol>{
+@interface LoginTableViewController : UITableViewController <ResponseActionProtocol>{
     RKClient *_client;
+    UIAlertView *waitingAlert;
 }
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;

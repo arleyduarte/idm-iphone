@@ -8,8 +8,10 @@
 
 #import "LoginTableViewController.h"
 #import "ConnectionParameters.h"
+#import "WhereIAmViewController.h"
 
 NSURL *gRKCatalogBaseURL = nil;
+
 
 @interface LoginTableViewController ()
 
@@ -18,6 +20,7 @@ NSURL *gRKCatalogBaseURL = nil;
 @implementation LoginTableViewController
 @synthesize usernameTextField;
 @synthesize passwordTextField;
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -32,8 +35,7 @@ NSURL *gRKCatalogBaseURL = nil;
 {
     [super viewDidLoad];
 
-    NSURL *gRKCatalogBaseURL = [[NSURL alloc] initWithString:BASE_URL];
-    
+    gRKCatalogBaseURL = [[NSURL alloc] initWithString:BASE_URL];
     _client  = [[RKClient alloc] initWithBaseURL:gRKCatalogBaseURL];
 
     // Uncomment the following line to preserve selection between presentations.
@@ -51,56 +53,30 @@ NSURL *gRKCatalogBaseURL = nil;
 
 
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 #pragma mark - ResponseActionProtocol methods
 
 -(void)didSucessfullyAction:(NSString *)message{
     NSLog(@"Did sucessfully %@", message);
+    [waitingAlert dismissWithClickedButtonIndex:0 animated:YES];
+    
+    
     [usernameTextField setEnabled:YES];
     [passwordTextField setEnabled:YES];
+    
+    WhereIAmViewController *whereIAmViewController = [[self storyboard] instantiateViewControllerWithIdentifier:@"WhereIAmViewController"];
+    [whereIAmViewController setUserId:message];
+    
+    [[self navigationController] pushViewController:whereIAmViewController animated:YES];
+
     
 }
 
 -(void)didNotSucessfullyAction:(NSString *)message{
-    NSLog(@"Did not sucessfully");
+    NSLog(@" *********        Did not sucessfully");
+    
+    [waitingAlert dismissWithClickedButtonIndex:0 animated:YES];
     NSString *reason = @"El nombre de usuario o contraseña es incorrecta. Ingreselos nuevamente";
     NSString *title = @"Datos no validos";
     
@@ -129,47 +105,30 @@ NSURL *gRKCatalogBaseURL = nil;
         [passwordTextField becomeFirstResponder];
         return NO;
     }
-    
-    //disable both user inpuths to avoid text changue during request
-   // [usernameTextField setEnabled:NO];
-   // [passwordTextField setEnabled:NO];
+
 
     UserValidatorManager *userValidatorManager = [UserValidatorManager sharedInstance];
-    
     [userValidatorManager setDelegate:self];
-    [userValidatorManager validateUserWithUserName:usernameTextField.text password:passwordTextField.text];
-
-    
-    
-    UIImage *image = [UIImage imageNamed:@"RestKit.png"];
-    NSData *imageData  = UIImagePNGRepresentation(image);
-    
-    
 
 
-    
-    //RKParams *params = [RKParams params];
-    
-  
     
     NSDictionary *shopParams = [NSDictionary dictionaryWithKeysAndObjects:
-                                @"password",@"123",
-                                @"location",@"latitude,longitude",
+                                @"username",usernameTextField.text,
+                                @"password",passwordTextField.text,
                                 nil];
     
     RKParams *params = [RKParams paramsWithDictionary:shopParams];
-    
-    
-    //  [params setData:imageData MIMEType:@"image/png" forParam:@"image2"];
-    
-    // Log info about the serialization
     NSLog(@"RKParams HTTPHeaderValueForContentType = %@", [params HTTPHeaderValueForContentType]);
     NSLog(@"RKParams HTTPHeaderValueForContentLength = %d", [params HTTPHeaderValueForContentLength]);
+    [_client post:@"/user/validate" params:params delegate:userValidatorManager];
+  
+    waitingAlert = [[UIAlertView alloc] initWithTitle:@"Por favor espera" message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:nil] ;
+    [waitingAlert show];
     
-    
-    
-    [_client post:@"/user/validate" params:params delegate:self];
-    
+    UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    indicator.center = CGPointMake(waitingAlert.bounds.size.width / 2, waitingAlert.bounds.size.height - 50);
+    [indicator startAnimating];
+    [waitingAlert addSubview:indicator];
     
     NSLog(@"user name %@", usernameTextField.text);
     
@@ -177,27 +136,6 @@ NSURL *gRKCatalogBaseURL = nil;
     return YES;
 }
 
-- (void)requestDidStartLoad:(RKRequest *)request
-{
-    
-}
-
-
-- (void)request:(RKRequest *)request didSendBodyData:(NSInteger)bytesWritten totalBytesWritten:(NSInteger)totalBytesWritten totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite
-{
-    NSLog(@"user didSendBodyData %@", @"dd");
-}
-
-- (void)request:(RKRequest *)request didLoadResponse:(RKResponse *)response
-{
-    NSLog(@"user didLoadResponse %@", [response bodyAsString]);
-    
-}
-
-- (void)request:(RKRequest *)request didFailLoadWithError:(NSError *)error
-{
-    NSLog(@"user didFailLoadWithError %@", @"dd");
-}
 
 
 - (void)viewDidUnload {

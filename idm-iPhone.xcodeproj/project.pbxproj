@@ -11,7 +11,6 @@
 		061A387B165D6CE900100DD0 /* RestKit.png in Resources */ = {isa = PBXBuildFile; fileRef = 061A387A165D6CE800100DD0 /* RestKit.png */; };
 		06ACC549165C1E4D00C1DC5A /* LoginTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06ACC548165C1E4D00C1DC5A /* LoginTableViewController.m */; };
 		06ACC550165CFD6C00C1DC5A /* UserValidatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 06ACC54F165CFD6C00C1DC5A /* UserValidatorManager.m */; };
-		06ACC553165D060C00C1DC5A /* NSString+RFC3875.m in Sources */ = {isa = PBXBuildFile; fileRef = 06ACC552165D060C00C1DC5A /* NSString+RFC3875.m */; };
 		06ACC556165D182100C1DC5A /* ConnectionParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 06ACC555165D182100C1DC5A /* ConnectionParameters.m */; };
 		06B4F1811655474C005B9C64 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06B4F1801655474C005B9C64 /* UIKit.framework */; };
 		06B4F1831655474C005B9C64 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06B4F1821655474C005B9C64 /* Foundation.framework */; };
@@ -32,6 +31,9 @@
 		06B4F1C616554997005B9C64 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06B4F1BF16554997005B9C64 /* Security.framework */; };
 		06B4F1C716554997005B9C64 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06B4F1C016554997005B9C64 /* SystemConfiguration.framework */; };
 		06B4F1C8165549A0005B9C64 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06B4F1AF16554894005B9C64 /* libRestKit.a */; };
+		06D210F5166D268700F0B0AE /* AddCheckinResourceHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D210F4166D268700F0B0AE /* AddCheckinResourceHandler.m */; };
+		06F2D94B16639B080020EE69 /* WhereIAmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F2D94A16639B080020EE69 /* WhereIAmViewController.m */; };
+		06F2D94D16639C670020EE69 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F2D94C16639C670020EE69 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,8 +90,6 @@
 		06ACC54B165C2A4C00C1DC5A /* ResponseActionProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResponseActionProtocol.h; sourceTree = "<group>"; };
 		06ACC54E165CFD6C00C1DC5A /* UserValidatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserValidatorManager.h; sourceTree = "<group>"; };
 		06ACC54F165CFD6C00C1DC5A /* UserValidatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserValidatorManager.m; sourceTree = "<group>"; };
-		06ACC551165D060C00C1DC5A /* NSString+RFC3875.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RFC3875.h"; sourceTree = "<group>"; };
-		06ACC552165D060C00C1DC5A /* NSString+RFC3875.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RFC3875.m"; sourceTree = "<group>"; };
 		06ACC554165D182100C1DC5A /* ConnectionParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionParameters.h; sourceTree = "<group>"; };
 		06ACC555165D182100C1DC5A /* ConnectionParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionParameters.m; sourceTree = "<group>"; };
 		06B4F17C1655474C005B9C64 /* idm-iPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "idm-iPhone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +116,11 @@
 		06B4F1BE16554997005B9C64 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		06B4F1BF16554997005B9C64 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		06B4F1C016554997005B9C64 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		06D210F3166D268700F0B0AE /* AddCheckinResourceHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCheckinResourceHandler.h; sourceTree = "<group>"; };
+		06D210F4166D268700F0B0AE /* AddCheckinResourceHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCheckinResourceHandler.m; sourceTree = "<group>"; };
+		06F2D94916639B080020EE69 /* WhereIAmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhereIAmViewController.h; sourceTree = "<group>"; };
+		06F2D94A16639B080020EE69 /* WhereIAmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhereIAmViewController.m; sourceTree = "<group>"; };
+		06F2D94C16639C670020EE69 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06F2D94D16639C670020EE69 /* MapKit.framework in Frameworks */,
 				06B4F1C8165549A0005B9C64 /* libRestKit.a in Frameworks */,
 				06B4F1C116554997005B9C64 /* CFNetwork.framework in Frameworks */,
 				06B4F1C216554997005B9C64 /* CoreData.framework in Frameworks */,
@@ -156,10 +162,10 @@
 				06ACC54B165C2A4C00C1DC5A /* ResponseActionProtocol.h */,
 				06ACC54E165CFD6C00C1DC5A /* UserValidatorManager.h */,
 				06ACC54F165CFD6C00C1DC5A /* UserValidatorManager.m */,
-				06ACC551165D060C00C1DC5A /* NSString+RFC3875.h */,
-				06ACC552165D060C00C1DC5A /* NSString+RFC3875.m */,
 				06ACC554165D182100C1DC5A /* ConnectionParameters.h */,
 				06ACC555165D182100C1DC5A /* ConnectionParameters.m */,
+				06D210F3166D268700F0B0AE /* AddCheckinResourceHandler.h */,
+				06D210F4166D268700F0B0AE /* AddCheckinResourceHandler.m */,
 			);
 			name = ResourceHandler;
 			path = ..;
@@ -168,6 +174,7 @@
 		06B4F1711655474C005B9C64 = {
 			isa = PBXGroup;
 			children = (
+				06F2D94C16639C670020EE69 /* MapKit.framework */,
 				06B4F1A316554894005B9C64 /* RestKit.xcodeproj */,
 				06B4F1861655474C005B9C64 /* idm-iPhone */,
 				06B4F17F1655474C005B9C64 /* Frameworks */,
@@ -203,6 +210,7 @@
 		06B4F1861655474C005B9C64 /* idm-iPhone */ = {
 			isa = PBXGroup;
 			children = (
+				06D210F6166D371900F0B0AE /* Model */,
 				061A3869165D509400100DD0 /* DomainModel */,
 				06ACC54A165C2A1300C1DC5A /* ResourceHandler */,
 				06B4F1C9165556B1005B9C64 /* Controllers */,
@@ -248,9 +256,18 @@
 				061A387A165D6CE800100DD0 /* RestKit.png */,
 				06ACC547165C1E4D00C1DC5A /* LoginTableViewController.h */,
 				06ACC548165C1E4D00C1DC5A /* LoginTableViewController.m */,
+				06F2D94916639B080020EE69 /* WhereIAmViewController.h */,
+				06F2D94A16639B080020EE69 /* WhereIAmViewController.m */,
 			);
 			name = Controllers;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		06D210F6166D371900F0B0AE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,9 +387,10 @@
 				06B4F19D1655474D005B9C64 /* ViewController.m in Sources */,
 				06ACC549165C1E4D00C1DC5A /* LoginTableViewController.m in Sources */,
 				06ACC550165CFD6C00C1DC5A /* UserValidatorManager.m in Sources */,
-				06ACC553165D060C00C1DC5A /* NSString+RFC3875.m in Sources */,
 				06ACC556165D182100C1DC5A /* ConnectionParameters.m in Sources */,
 				061A386C165D50B300100DD0 /* Status.m in Sources */,
+				06F2D94B16639B080020EE69 /* WhereIAmViewController.m in Sources */,
+				06D210F5166D268700F0B0AE /* AddCheckinResourceHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

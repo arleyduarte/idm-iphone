@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="qRE-yg-oUg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="NKL-m7-kYg">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
@@ -16,17 +16,17 @@
                             <rect key="frame" x="0.0" y="0.0" width="320" height="42"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TaX-ds-yOA">
+                                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fAs-dN-seU">
                                     <items>
-                                        <navigationItem title="Title" id="QXi-Fy-PLc"/>
+                                        <navigationItem title="Title" id="Jgf-Tr-SNI"/>
                                     </items>
                                 </navigationBar>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstItem="TaX-ds-yOA" firstAttribute="leading" secondItem="HMB-dx-ZbX" secondAttribute="leading" type="default" id="Vm0-Qv-XNc"/>
-                                <constraint firstItem="TaX-ds-yOA" firstAttribute="trailing" secondItem="HMB-dx-ZbX" secondAttribute="trailing" type="default" id="f5u-SS-558"/>
-                                <constraint firstItem="TaX-ds-yOA" firstAttribute="centerY" secondItem="HMB-dx-ZbX" secondAttribute="centerY" type="default" id="iSb-zL-TVb"/>
+                                <constraint firstItem="fAs-dN-seU" firstAttribute="trailing" secondItem="HMB-dx-ZbX" secondAttribute="trailing" type="default" id="OJI-L2-Wp8"/>
+                                <constraint firstItem="fAs-dN-seU" firstAttribute="leading" secondItem="HMB-dx-ZbX" secondAttribute="leading" type="default" id="eVT-BV-Ta1"/>
+                                <constraint firstItem="fAs-dN-seU" firstAttribute="top" secondItem="HMB-dx-ZbX" secondAttribute="top" type="default" id="maG-xB-zv8"/>
                             </constraints>
                         </view>
                         <sections>
@@ -89,6 +89,7 @@
                             <outlet property="delegate" destination="qRE-yg-oUg" id="wPo-GP-e41"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="LwX-0Z-MDC"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="passwordTextField" destination="9g0-GM-0uc" id="ZSN-vn-NOh"/>
@@ -97,9 +98,147 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YDB-Mb-mJ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="110" y="-62"/>
+            <point key="canvasLocation" x="1162" y="-62"/>
+        </scene>
+        <!--WhereI Am View Controller - IDM-->
+        <scene sceneID="ljq-eu-Y7U">
+            <objects>
+                <viewController storyboardIdentifier="WhereIAmViewController" id="nsw-oY-7gQ" customClass="WhereIAmViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FnJ-iX-tXf">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7B8-bC-0Xq">
+                                <connections>
+                                    <outlet property="delegate" destination="nsw-oY-7gQ" id="Df2-bs-8Zz"/>
+                                </connections>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5t-ew-L8T">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="reportCurrentLocation:" destination="nsw-oY-7gQ" eventType="touchUpInside" id="i18-d8-2nK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="i5t-ew-L8T" firstAttribute="trailing" secondItem="FnJ-iX-tXf" secondAttribute="trailing" type="default" id="Gq2-ot-dS9"/>
+                            <constraint firstItem="7B8-bC-0Xq" firstAttribute="top" secondItem="FnJ-iX-tXf" secondAttribute="top" type="default" id="Nr9-UQ-6AB"/>
+                            <constraint firstItem="7B8-bC-0Xq" firstAttribute="leading" secondItem="FnJ-iX-tXf" secondAttribute="leading" type="default" id="Uos-Lo-Tdl"/>
+                            <constraint firstItem="7B8-bC-0Xq" firstAttribute="bottom" secondItem="FnJ-iX-tXf" secondAttribute="bottom" type="default" id="Vxs-Yw-dQx"/>
+                            <constraint firstAttribute="bottom" secondItem="i5t-ew-L8T" secondAttribute="bottom" constant="5" id="aIV-Bb-Ule"/>
+                            <constraint firstItem="i5t-ew-L8T" firstAttribute="leading" secondItem="FnJ-iX-tXf" secondAttribute="leading" type="default" id="rxt-ZS-BcW"/>
+                            <constraint firstItem="7B8-bC-0Xq" firstAttribute="trailing" secondItem="FnJ-iX-tXf" secondAttribute="trailing" type="default" id="xAM-RC-SVV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="IDM" id="WM6-Sg-Hvi">
+                        <barButtonItem key="backBarButtonItem" title="Atras" id="ALY-Ao-FNq"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="myMapView" destination="7B8-bC-0Xq" id="RMc-BS-nqQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JMn-5a-PBP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2692" y="-55"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tdm-n1-GwY">
+            <objects>
+                <viewController id="2Pu-77-bpo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Au8-sz-uhP">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vlm-co-0ic">
+                                <items>
+                                    <navigationItem title="Title" id="eHV-wh-zRZ"/>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qid-DB-JOT">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qid-DB-JOT" firstAttribute="leading" secondItem="Au8-sz-uhP" secondAttribute="leading" type="default" id="2bv-uV-lEu"/>
+                            <constraint firstItem="vlm-co-0ic" firstAttribute="leading" secondItem="Au8-sz-uhP" secondAttribute="leading" type="default" id="IzE-pk-hMF"/>
+                            <constraint firstItem="qid-DB-JOT" firstAttribute="bottom" secondItem="Au8-sz-uhP" secondAttribute="bottom" type="default" id="LCO-Gd-MVs"/>
+                            <constraint firstItem="vlm-co-0ic" firstAttribute="trailing" secondItem="Au8-sz-uhP" secondAttribute="trailing" type="default" id="Tx8-aX-r1m"/>
+                            <constraint firstItem="qid-DB-JOT" firstAttribute="top" secondItem="vlm-co-0ic" secondAttribute="bottom" type="default" id="aAX-gg-9Tw"/>
+                            <constraint firstItem="qid-DB-JOT" firstAttribute="trailing" secondItem="Au8-sz-uhP" secondAttribute="trailing" type="default" id="mRq-DW-vEU"/>
+                            <constraint firstItem="vlm-co-0ic" firstAttribute="top" secondItem="Au8-sz-uhP" secondAttribute="top" type="default" id="vda-bH-rUG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="T5w-LT-Rmu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6hd-sk-YBU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3085" y="-55"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xf8-eJ-5gE">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="NKL-m7-kYg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xmE-Xc-oqN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qRE-yg-oUg" kind="relationship" relationship="rootViewController" id="TZw-ex-wYt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AwI-Zs-1eh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="636" y="-62"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vDX-H2-hLx">
+            <objects>
+                <navigationController id="fmc-Nc-zUW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0wZ-ug-w0J">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nsw-oY-7gQ" kind="relationship" relationship="rootViewController" id="844-Ek-qSk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TDb-ch-ArX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2166" y="-55"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="LoginTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginTableViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="usernameTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="WhereIAmViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WhereIAmViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="reportCurrentLocation:"/>
+                <relationship kind="outlet" name="myMapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
