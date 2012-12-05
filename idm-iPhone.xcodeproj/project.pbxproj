@@ -513,10 +513,12 @@
 		06B4F1A11655474D005B9C64 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "idm-iPhone/idm-iPhone-Prefix.pch";
 				INFOPLIST_FILE = "idm-iPhone/idm-iPhone-Info.plist";
 				PRODUCT_NAME = IDM;
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -524,10 +526,12 @@
 		06B4F1A21655474D005B9C64 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "idm-iPhone/idm-iPhone-Prefix.pch";
 				INFOPLIST_FILE = "idm-iPhone/idm-iPhone-Info.plist";
 				PRODUCT_NAME = IDM;
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
