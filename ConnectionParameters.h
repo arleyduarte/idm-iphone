@@ -9,5 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface ConnectionParameters : NSObject
-#define BASE_URL @"http://192.168.90.234:4567"
+//#define BASE_URL @"http://192.168.90.234:4567"
+#define BASE_URL @"http://192.168.0.14:4567"
+
 @end

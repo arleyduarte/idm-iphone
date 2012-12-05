@@ -9,6 +9,7 @@
 #import "WhereIAmViewController.h"
 #import "AddCheckinResourceHandler.h"
 #import "ConnectionParameters.h"
+#import "WebViewController.h"
 
 
 
@@ -93,6 +94,8 @@
     
     
 }
+
+
 -(void) setUserId:(NSString *) message{
     userId = [[NSString alloc] initWithString:message];
     NSLog(@"set user id %@", userId);
@@ -101,6 +104,11 @@
 -(void) didSucessfullyAction:(NSString *) message{
     NSLog(@"Sucessfully action");
     [waitingAlert dismissWithClickedButtonIndex:0 animated:YES];
+    
+    WebViewController *webViewController = [[self storyboard] instantiateViewControllerWithIdentifier:@"WebViewController"];
+    [webViewController setRedirectURL:message];
+    
+    [[self navigationController] pushViewController:webViewController animated:YES];
     
     
 }
@@ -111,6 +119,7 @@
 }
 
 - (void)viewDidUnload {
+    [self setMyMapView:nil];
     [self setMyMapView:nil];
     [super viewDidUnload];
 }

@@ -17,8 +17,10 @@
     NSString *userId;
 
 }
-- (IBAction)reportCurrentLocation:(id)sender;
 @property (weak, nonatomic) IBOutlet MKMapView *myMapView;
+
+
+- (IBAction)reportCurrentLocation:(id)sender;
 
 -(void) setUserId:(NSString *) message;
 

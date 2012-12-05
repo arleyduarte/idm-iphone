@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		061A386C165D50B300100DD0 /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 061A386B165D50B300100DD0 /* Status.m */; };
 		061A387B165D6CE900100DD0 /* RestKit.png in Resources */ = {isa = PBXBuildFile; fileRef = 061A387A165D6CE800100DD0 /* RestKit.png */; };
+		06244ED9166F9E4F008ABFA2 /* black.png in Resources */ = {isa = PBXBuildFile; fileRef = 06244ED8166F9E4F008ABFA2 /* black.png */; };
+		06244EDB166FA079008ABFA2 /* app_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06244EDA166FA079008ABFA2 /* app_icon@2x.png */; };
+		06244EDD166FA082008ABFA2 /* app-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 06244EDC166FA082008ABFA2 /* app-icon.png */; };
+		06244EDF166FA098008ABFA2 /* app-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 06244EDE166FA098008ABFA2 /* app-icon.png */; };
+		06244EE1166FA09E008ABFA2 /* app_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06244EE0166FA09E008ABFA2 /* app_icon@2x.png */; };
 		06ACC549165C1E4D00C1DC5A /* LoginTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06ACC548165C1E4D00C1DC5A /* LoginTableViewController.m */; };
 		06ACC550165CFD6C00C1DC5A /* UserValidatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 06ACC54F165CFD6C00C1DC5A /* UserValidatorManager.m */; };
 		06ACC556165D182100C1DC5A /* ConnectionParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 06ACC555165D182100C1DC5A /* ConnectionParameters.m */; };
@@ -32,6 +37,7 @@
 		06B4F1C716554997005B9C64 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06B4F1C016554997005B9C64 /* SystemConfiguration.framework */; };
 		06B4F1C8165549A0005B9C64 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06B4F1AF16554894005B9C64 /* libRestKit.a */; };
 		06D210F5166D268700F0B0AE /* AddCheckinResourceHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D210F4166D268700F0B0AE /* AddCheckinResourceHandler.m */; };
+		06D210FC166E204600F0B0AE /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D210FB166E204600F0B0AE /* WebViewController.m */; };
 		06F2D94B16639B080020EE69 /* WhereIAmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F2D94A16639B080020EE69 /* WhereIAmViewController.m */; };
 		06F2D94D16639C670020EE69 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F2D94C16639C670020EE69 /* MapKit.framework */; };
 /* End PBXBuildFile section */
@@ -85,6 +91,11 @@
 		061A386A165D50B300100DD0 /* Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Status.h; sourceTree = "<group>"; };
 		061A386B165D50B300100DD0 /* Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Status.m; sourceTree = "<group>"; };
 		061A387A165D6CE800100DD0 /* RestKit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RestKit.png; sourceTree = "<group>"; };
+		06244ED8166F9E4F008ABFA2 /* black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black.png; sourceTree = "<group>"; };
+		06244EDA166FA079008ABFA2 /* app_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app_icon@2x.png"; sourceTree = "<group>"; };
+		06244EDC166FA082008ABFA2 /* app-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon.png"; sourceTree = "<group>"; };
+		06244EDE166FA098008ABFA2 /* app-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon.png"; sourceTree = "<group>"; };
+		06244EE0166FA09E008ABFA2 /* app_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app_icon@2x.png"; sourceTree = "<group>"; };
 		06ACC547165C1E4D00C1DC5A /* LoginTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginTableViewController.h; sourceTree = "<group>"; };
 		06ACC548165C1E4D00C1DC5A /* LoginTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginTableViewController.m; sourceTree = "<group>"; };
 		06ACC54B165C2A4C00C1DC5A /* ResponseActionProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResponseActionProtocol.h; sourceTree = "<group>"; };
@@ -92,7 +103,7 @@
 		06ACC54F165CFD6C00C1DC5A /* UserValidatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserValidatorManager.m; sourceTree = "<group>"; };
 		06ACC554165D182100C1DC5A /* ConnectionParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionParameters.h; sourceTree = "<group>"; };
 		06ACC555165D182100C1DC5A /* ConnectionParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionParameters.m; sourceTree = "<group>"; };
-		06B4F17C1655474C005B9C64 /* idm-iPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "idm-iPhone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		06B4F17C1655474C005B9C64 /* IDM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IDM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06B4F1801655474C005B9C64 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		06B4F1821655474C005B9C64 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		06B4F1841655474C005B9C64 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -118,6 +129,8 @@
 		06B4F1C016554997005B9C64 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		06D210F3166D268700F0B0AE /* AddCheckinResourceHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCheckinResourceHandler.h; sourceTree = "<group>"; };
 		06D210F4166D268700F0B0AE /* AddCheckinResourceHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCheckinResourceHandler.m; sourceTree = "<group>"; };
+		06D210FA166E204600F0B0AE /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		06D210FB166E204600F0B0AE /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		06F2D94916639B080020EE69 /* WhereIAmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhereIAmViewController.h; sourceTree = "<group>"; };
 		06F2D94A16639B080020EE69 /* WhereIAmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhereIAmViewController.m; sourceTree = "<group>"; };
 		06F2D94C16639C670020EE69 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -174,6 +187,8 @@
 		06B4F1711655474C005B9C64 = {
 			isa = PBXGroup;
 			children = (
+				06244EE0166FA09E008ABFA2 /* app_icon@2x.png */,
+				06244EDE166FA098008ABFA2 /* app-icon.png */,
 				06F2D94C16639C670020EE69 /* MapKit.framework */,
 				06B4F1A316554894005B9C64 /* RestKit.xcodeproj */,
 				06B4F1861655474C005B9C64 /* idm-iPhone */,
@@ -185,7 +200,7 @@
 		06B4F17D1655474C005B9C64 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				06B4F17C1655474C005B9C64 /* idm-iPhone.app */,
+				06B4F17C1655474C005B9C64 /* IDM.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -227,6 +242,9 @@
 		06B4F1871655474C005B9C64 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				06244EDC166FA082008ABFA2 /* app-icon.png */,
+				06244EDA166FA079008ABFA2 /* app_icon@2x.png */,
+				06244ED8166F9E4F008ABFA2 /* black.png */,
 				06B4F1881655474C005B9C64 /* idm-iPhone-Info.plist */,
 				06B4F1891655474C005B9C64 /* InfoPlist.strings */,
 				06B4F18C1655474C005B9C64 /* main.m */,
@@ -258,6 +276,8 @@
 				06ACC548165C1E4D00C1DC5A /* LoginTableViewController.m */,
 				06F2D94916639B080020EE69 /* WhereIAmViewController.h */,
 				06F2D94A16639B080020EE69 /* WhereIAmViewController.m */,
+				06D210FA166E204600F0B0AE /* WebViewController.h */,
+				06D210FB166E204600F0B0AE /* WebViewController.m */,
 			);
 			name = Controllers;
 			path = ..;
@@ -288,7 +308,7 @@
 			);
 			name = "idm-iPhone";
 			productName = "idm-iPhone";
-			productReference = 06B4F17C1655474C005B9C64 /* idm-iPhone.app */;
+			productReference = 06B4F17C1655474C005B9C64 /* IDM.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -372,6 +392,11 @@
 				06B4F1971655474C005B9C64 /* Default-568h@2x.png in Resources */,
 				06B4F19A1655474C005B9C64 /* MainStoryboard.storyboard in Resources */,
 				061A387B165D6CE900100DD0 /* RestKit.png in Resources */,
+				06244ED9166F9E4F008ABFA2 /* black.png in Resources */,
+				06244EDB166FA079008ABFA2 /* app_icon@2x.png in Resources */,
+				06244EDD166FA082008ABFA2 /* app-icon.png in Resources */,
+				06244EDF166FA098008ABFA2 /* app-icon.png in Resources */,
+				06244EE1166FA09E008ABFA2 /* app_icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +416,7 @@
 				061A386C165D50B300100DD0 /* Status.m in Sources */,
 				06F2D94B16639B080020EE69 /* WhereIAmViewController.m in Sources */,
 				06D210F5166D268700F0B0AE /* AddCheckinResourceHandler.m in Sources */,
+				06D210FC166E204600F0B0AE /* WebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,7 +516,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "idm-iPhone/idm-iPhone-Prefix.pch";
 				INFOPLIST_FILE = "idm-iPhone/idm-iPhone-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = IDM;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -501,7 +527,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "idm-iPhone/idm-iPhone-Prefix.pch";
 				INFOPLIST_FILE = "idm-iPhone/idm-iPhone-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = IDM;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
